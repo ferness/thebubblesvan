@@ -1,0 +1,44 @@
+.contactsmain{
+    padding: 5rem 0 5rem 0;
+}
+
+
+.contatsflex{
+    padding: 5rem  0 0 0;   
+    text-align: center;
+    align-items: center;
+}
+
+
+
+h4{
+    font-family: 'Courgette', cursive;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    margin-top: 0;
+}
+
+
+
+.contactsmain p{
+    font-family: 'Courgette', cursive;
+    font-size: 1.5rem;
+    color: black;
+    text-align: center;
+}
+
+
+.hypertext{
+    font-family: 'Courgette', cursive;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    align-items: center;
+}
+.hypertext:hover{
+    text-decoration: underline;
+}
+.weight{
+    font-weight: 600;
+
+}
