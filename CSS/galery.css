@@ -100,4 +100,15 @@
         width: 200px;
     }
 }
+@media only screen and (max-width: 420px) {
+    .Box img {
+        height: 200px;
+        width: 200px;
+    }
+    .PhotoGalery {
+        align-items: center;
+        padding: 5rem 2rem 5rem 2rem;
+    }
+}
+
 

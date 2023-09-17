@@ -20,3 +20,8 @@
         padding: 5rem 5rem 2rem 5rem;
     }
 }
+@media only screen and (max-width: 500px){
+    .aboutdiv{
+        padding: 2rem 2rem 2rem 2rem;
+    }
+}

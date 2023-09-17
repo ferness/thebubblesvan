@@ -9,9 +9,10 @@ footer p {
     color: white;
 }
 
-a{
+.foota{
     text-decoration: none;
     color: white;
+    font-weight: 0;
 }
 a:hover{
     font-weight: 700;
@@ -25,10 +26,29 @@ a:hover{
 .socaillogo{
     height: 80px;
     width: 80px;
+    margin: 0 1rem 0 1rem;
 }
 .bottomfooter{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
+}
+@media only screen and (max-width: 1000px){
+    .socaillogo{
+        height: 70px;
+        width: 70px;
+        margin: 0 1rem 0 1rem;
+    }
+}
+@media only screen and (max-width: 450px){
+    .socaillogo{
+        margin: 0 0.5rem 0 0.5rem;
+    }
+}
+@media only screen and (max-width: 420px){
+    .socaillogo{
+        height: 60px;
+        width: 60px;
+        }
 }
