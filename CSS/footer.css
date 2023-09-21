@@ -1,0 +1,78 @@
+footer {
+    margin: 0;
+    padding: 2rem 2rem 0 2rem;
+    background-color: black;
+}
+
+footer p {
+    font-size: 1.2rem;
+    margin: 0;
+    color: white;
+}
+
+.foota {
+    text-decoration: none;
+    color: white;
+    font-weight: 0;
+}
+
+a:hover {
+    font-weight: 700;
+}
+
+.social {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.socaillogo {
+    height: 80px;
+    width: 80px;
+    margin: 0 1rem 0 1rem;
+}
+
+.bottomfooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 1000px) {
+    .socaillogo {
+        height: 70px;
+        width: 70px;
+        margin: 0 1rem 0 1rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .socaillogo {
+        margin: 0 0.5rem 0 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .socaillogo {
+        height: 60px;
+        width: 60px;
+    }
+    footer p {
+        font-size: 1rem;
+        margin: 0;
+        color: white;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .socaillogo {
+        height: 50px;
+        width: 50px;
+    }
+    footer p {
+        font-size: 0.8rem;
+        margin: 0;
+        color: white;
+    }
+}
