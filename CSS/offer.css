@@ -1,62 +1,69 @@
-.mainoffer{
+.mainoffer {
     background-color: #dfba95;
     padding: 1rem;
     border-bottom: 2px solid black;
     border-top: 2px solid black;
-
 }
-.offer{
+
+.offer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding: 5rem 5rem 2.5rem 5rem;
 }
-.price{
+
+.price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     text-align: center;
     padding: 1rem;
+    height: 100%;
 }
+
 .vl {
     border-left: 3px solid black;
     height: 32rem;
     left: 50%;
     margin-left: -3px;
     top: 0;
-  }
-h5{
+}
+
+h5 {
     font-family: 'Courgette', cursive;
     font-weight: 700;
     text-align: center;
     font-size: 3rem;
     margin: 0;
 }
-p{
+
+p {
     font-family: 'Courgette', cursive;
     font-size: 1.5rem;
     margin: 0.5rem;
     color: black;
 }
-.cena{
+
+.cena {
     font-family: 'Kavoon', cursive;
     font-size: 2rem;
-    margin-bottom: 3rem;
-
 }
 
-
 @media only screen and (max-width: 1050px) {
-    .offer{
+    .offer {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         padding: 5rem 5rem 2.5rem 5rem;
     }
-    .vl{
+    .vl {
         display: none;
     }
 }
+
 @media only screen and (max-width: 400px) {
-    .offer{
+    .offer {
         padding: 2rem 2rem 2.5rem 2rem;
     }
 }
