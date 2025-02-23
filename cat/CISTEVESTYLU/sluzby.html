@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🔥 Čistě ve stylu – Perfektní péče o váš vůz! 🚘✨</title>
+  <link rel="icon" type="image/x-icon" href="IMG/Icon - logo.jpg">
+  <style>
+    /* CSS */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+      background-color: black;
+    }
+
+    .container {
+      width: 100%;
+      min-height: 100vh;
+    }
+
+    .header {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .background-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.5;
+    }
+
+    .navbar {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-family: "Orbitron", serif;
+      font-weight: 900;
+    }
+
+    .highlight {
+      color: red;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: white;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+      color: red;
+    }
+
+    .hero-content {
+      z-index: 1;
+    }
+
+    .hero-title {
+      font-size: 5rem;
+    }
+
+    .hero-description {
+      font-size: 1.5rem;
+      margin: 20px 0;
+    }
+
+    .section {
+      padding: 60px 20px;
+    }
+
+    .section-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .service-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    .service-card {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      border-radius: 2px;
+      border: 1px solid rgba(255, 0, 0, 0.3);
+      text-align: left;
+      transition: box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .service-card:hover {
+      box-shadow: 0 0 10px red;
+    }
+
+    .service-icon {
+      font-size: 3rem;
+      color: red;
+      margin-bottom: 20px;
+    }
+
+    .service-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .service-description {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Dropdown (Accordion) Styles */
+    .dropdown-content {
+      display: none;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 2px;
+    }
+
+    .dropdown-btn {
+      background-color: black;
+      color: white;
+      padding: 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 0, 0, 0.3);
+      width: 100%;
+      font-size: 1.3rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .dropdown-btn:hover {
+      background-color: rgba(255, 0, 0, 0.5);
+    }
+
+    .active .dropdown-content {
+      display: block;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #222;
+      padding: 20px 0;
+      text-align: center;
+      color: white;
+    }
+
+    .cta-button {
+      color: red;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  </style>
+  <script>
+    // JavaScript for dropdown functionality
+    function toggleDropdown(event) {
+      event.currentTarget.classList.toggle('active');
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="overlay"></div>
+      <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&q=80" alt="Luxury car being detailed" class="background-image">
+      <div class="navbar">
+        <div class="logo">
+          CISTE<span class="highlight">VESTYLU</span>
+        </div>
+        <div class="nav-links">
+          <a href="#services" class="nav-link">Služby</a>
+          <a href="#testimonials" class="nav-link">Reference</a>
+          <a href="#contact" class="nav-link">Kontakt</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="services" class="section">
+      <div class="section-content">
+        <h2 class="section-title">🔧 Naše služby</h2>
+        <div class="service-cards">
+          <!-- Service 1: Ceramic Protection -->
+          <div class="service-card" onclick="toggleDropdown(event)">
+            <div class="service-icon">🛡️</div>
+            <h3 class="service-title">Keramická ochrana</h3>
+            <p class="service-description">Nanesení keramického povlaku na lak, který chrání před vnějšími vlivy a zajišťuje dlouhotrvající lesk.</p>
+            <div class="dropdown-content">
+              <h4>Co je keramická ochrana?</h4>
+              <p>Keramická ochrana je pokročilý povlak, který je aplikován na lak automobilu, aby poskytl trvalou ochranu proti nečistotám, vodě, UV záření, a dokonce i chemikáliím.</p>
+              <p>Tento povlak se skládá z nanočástic, které vytvářejí silnou a odolnou vrstvu na povrchu. Keramický povlak odpuzuje vodu, což znamená, že kapky deště nebudou ulpívat na laku a nečistoty budou mít mnohem menší šanci se usadit.</p>
+              <p>Výhody: 
+                <ul>
+                  <li>Ochrana proti škrábancům a oděrkám.</li>
+                  <li>Snadné čištění, méně času stráveného s mytím vozu.</li>
+                  <li>Vysoce odolný vůči chemikáliím a kyselinám.</li>
+                  <li>Zvýšení lesku a hloubky barvy laku.</li>
+                </ul>
+              </p>
+              <p>Proces aplikace zahrnuje důkladnou přípravu laku, odstranění nečistot a následné nanesení vrstvy keramického povlaku, který se po několika hodinách stane tvrdým a stabilním.</p>
+              <p>Výsledek? Auto s dlouhodobou ochranou, které vypadá stále jako nové.</p>
+            </div>
+          </div>
+
+          <div class="service-card" onclick="toggleDropdown(event)">
+            <div class="service-icon">🛡️</div>
+            <h3 class="service-title">Keramická ochrana</h3>
+            <p class="service-description">Nanesení keramického povlaku na lak, který chrání před vnějšími vlivy a zajišťuje dlouhotrvající lesk.</p>
+            <div class="dropdown-content">
+              <h4>Co je keramická ochrana?</h4>
+              <p>Keramická ochrana je pokročilý povlak, který je aplikován na lak automobilu, aby poskytl trvalou ochranu proti nečistotám, vodě, UV záření, a dokonce i chemikáliím.</p>
+              <p>Tento povlak se skládá z nanočástic, které vytvářejí silnou a odolnou vrstvu na povrchu. Keramický povlak odpuzuje vodu, což znamená, že kapky deště nebudou ulpívat na laku a nečistoty budou mít mnohem menší šanci se usadit.</p>
+              <p>Výhody: 
+                <ul>
+                  <li>Ochrana proti škrábancům a oděrkám.</li>
+                  <li>Snadné čištění, méně času stráveného s mytím vozu.</li>
+                  <li>Vysoce odolný vůči chemikáliím a kyselinám.</li>
+                  <li>Zvýšení lesku a hloubky barvy laku.</li>
+                </ul>
+              </p>
+              <p>Proces aplikace zahrnuje důkladnou přípravu laku, odstranění nečistot a následné nanesení vrstvy keramického povlaku, který se po několika hodinách stane tvrdým a stabilním.</p>
+              <p>Výsledek? Auto s dlouhodobou ochranou, které vypadá stále jako nové.</p>
+            </div>
+          </div>
+
+          <div class="service-card" onclick="toggleDropdown(event)">
+            <div class="service-icon">🛡️</div>
+            <h3 class="service-title">Keramická ochrana</h3>
+            <p class="service-description">Nanesení keramického povlaku na lak, který chrání před vnějšími vlivy a zajišťuje dlouhotrvající lesk.</p>
+            <div class="dropdown-content">
+              <h4>Co je keramická ochrana?</h4>
+              <p>Keramická ochrana je pokročilý povlak, který je aplikován na lak automobilu, aby poskytl trvalou ochranu proti nečistotám, vodě, UV záření, a dokonce i chemikáliím.</p>
+              <p>Tento povlak se skládá z nanočástic, které vytvářejí silnou a odolnou vrstvu na povrchu. Keramický povlak odpuzuje vodu, což znamená, že kapky deště nebudou ulpívat na laku a nečistoty budou mít mnohem menší šanci se usadit.</p>
+              <p>Výhody: 
+                <ul>
+                  <li>Ochrana proti škrábancům a oděrkám.</li>
+                  <li>Snadné čištění, méně času stráveného s mytím vozu.</li>
+                  <li>Vysoce odolný vůči chemikáliím a kyselinám.</li>
+                  <li>Zvýšení lesku a hloubky barvy laku.</li>
+                </ul>
+              </p>
+              <p>Proces aplikace zahrnuje důkladnou přípravu laku, odstranění nečistot a následné nanesení vrstvy keramického povlaku, který se po několika hodinách stane tvrdým a stabilním.</p>
+              <p>Výsledek? Auto s dlouhodobou ochranou, které vypadá stále jako nové.</p>
+            </div>
+          </div>
+
+          <div class="service-card" onclick="toggleDropdown(event)">
+            <div class="service-icon">🛡️</div>
+            <h3 class="service-title">Keramická ochrana</h3>
+            <p class="service-description">Nanesení keramického povlaku na lak, který chrání před vnějšími vlivy a zajišťuje dlouhotrvající lesk.</p>
+            <div class="dropdown-content">
+              <h4>Co je keramická ochrana?</h4>
+              <p>Keramická ochrana je pokročilý povlak, který je aplikován na lak automobilu, aby poskytl trvalou ochranu proti nečistotám, vodě, UV záření, a dokonce i chemikáliím.</p>
+              <p>Tento povlak se skládá z nanočástic, které vytvářejí silnou a odolnou vrstvu na povrchu. Keramický povlak odpuzuje vodu, což znamená, že kapky deště nebudou ulpívat na laku a nečistoty budou mít mnohem menší šanci se usadit.</p>
+              <p>Výhody: 
+                <ul>
+                  <li>Ochrana proti škrábancům a oděrkám.</li>
+                  <li>Snadné čištění, méně času stráveného s mytím vozu.</li>
+                  <li>Vysoce odolný vůči chemikáliím a kyselinám.</li>
+                  <li>Zvýšení lesku a hloubky barvy laku.</li>
+                </ul>
+              </p>
+              <p>Proces aplikace zahrnuje důkladnou přípravu laku, odstranění nečistot a následné nanesení vrstvy keramického povlaku, který se po několika hodinách stane tvrdým a stabilním.</p>
+              <p>Výsledek? Auto s dlouhodobou ochranou, které vypadá stále jako nové.</p>
+            </div>
+          </div>
+
+          <div class="service-card" onclick="toggleDropdown(event)">
+            <div class="service-icon">🛡️</div>
+            <h3 class="service-title">Keramická ochrana</h3>
+            <p class="service-description">Nanesení keramického povlaku na lak, který chrání před vnějšími vlivy a zajišťuje dlouhotrvající lesk.</p>
+            <div class="dropdown-content">
+              <h4>Co je keramická ochrana?</h4>
+              <p>Keramická ochrana je pokročilý povlak, který je aplikován na lak automobilu, aby poskytl trvalou ochranu proti nečistotám, vodě, UV záření, a dokonce i chemikáliím.</p>
+              <p>Tento povlak se skládá z nanočástic, které vytvářejí silnou a odolnou vrstvu na povrchu. Keramický povlak odpuzuje vodu, což znamená, že kapky deště nebudou ulpívat na laku a nečistoty budou mít mnohem menší šanci se usadit.</p>
+              <p>Výhody: 
+                <ul>
+                  <li>Ochrana proti škrábancům a oděrkám.</li>
+                  <li>Snadné čištění, méně času stráveného s mytím vozu.</li>
+                  <li>Vysoce odolný vůči chemikáliím a kyselinám.</li>
+                  <li>Zvýšení lesku a hloubky barvy laku.</li>
+                </ul>
+              </p>
+              <p>Proces aplikace zahrnuje důkladnou přípravu laku, odstranění nečistot a následné nanesení vrstvy keramického povlaku, který se po několika hodinách stane tvrdým a stabilním.</p>
+              <p>Výsledek? Auto s dlouhodobou ochranou, které vypadá stále jako nové.</p>
+            </div>
+          </div>
+
+          <div class="service-card" onclick="toggleDropdown(event)">
+            <div class="service-icon">🛡️</div>
+            <h3 class="service-title">Keramická ochrana</h3>
+            <p class="service-description">Nanesení keramického povlaku na lak, který chrání před vnějšími vlivy a zajišťuje dlouhotrvající lesk.</p>
+            <div class="dropdown-content">
+              <h4>Co je keramická ochrana?</h4>
+              <p>Keramická ochrana je pokročilý povlak, který je aplikován na lak automobilu, aby poskytl trvalou ochranu proti nečistotám, vodě, UV záření, a dokonce i chemikáliím.</p>
+              <p>Tento povlak se skládá z nanočástic, které vytvářejí silnou a odolnou vrstvu na povrchu. Keramický povlak odpuzuje vodu, což znamená, že kapky deště nebudou ulpívat na laku a nečistoty budou mít mnohem menší šanci se usadit.</p>
+              <p>Výhody: 
+                <ul>
+                  <li>Ochrana proti škrábancům a oděrkám.</li>
+                  <li>Snadné čištění, méně času stráveného s mytím vozu.</li>
+                  <li>Vysoce odolný vůči chemikáliím a kyselinám.</li>
+                  <li>Zvýšení lesku a hloubky barvy laku.</li>
+                </ul>
+              </p>
+              <p>Proces aplikace zahrnuje důkladnou přípravu laku, odstranění nečistot a následné nanesení vrstvy keramického povlaku, který se po několika hodinách stane tvrdým a stabilním.</p>
+              <p>Výsledek? Auto s dlouhodobou ochranou, které vypadá stále jako nové.</p>
+            </div>
+          </div>
+
+          <div class="service-card" onclick="toggleDropdown(event)">
+            <div class="service-icon">🛡️</div>
+            <h3 class="service-title">Keramická ochrana</h3>
+            <p class="service-description">Nanesení keramického povlaku na lak, který chrání před vnějšími vlivy a zajišťuje dlouhotrvající lesk.</p>
+            <div class="dropdown-content">
+              <h4>Co je keramická ochrana?</h4>
+              <p>Keramická ochrana je pokročilý povlak, který je aplikován na lak automobilu, aby poskytl trvalou ochranu proti nečistotám, vodě, UV záření, a dokonce i chemikáliím.</p>
+              <p>Tento povlak se skládá z nanočástic, které vytvářejí silnou a odolnou vrstvu na povrchu. Keramický povlak odpuzuje vodu, což znamená, že kapky deště nebudou ulpívat na laku a nečistoty budou mít mnohem menší šanci se usadit.</p>
+              <p>Výhody: 
+                <ul>
+                  <li>Ochrana proti škrábancům a oděrkám.</li>
+                  <li>Snadné čištění, méně času stráveného s mytím vozu.</li>
+                  <li>Vysoce odolný vůči chemikáliím a kyselinám.</li>
+                  <li>Zvýšení lesku a hloubky barvy laku.</li>
+                </ul>
+              </p>
+              <p>Proces aplikace zahrnuje důkladnou přípravu laku, odstranění nečistot a následné nanesení vrstvy keramického povlaku, který se po několika hodinách stane tvrdým a stabilním.</p>
+              <p>Výsledek? Auto s dlouhodobou ochranou, které vypadá stále jako nové.</p>
+            </div>
+          </div>
+
+          <div class="service-card" onclick="toggleDropdown(event)">
+            <div class="service-icon">🛡️</div>
+            <h3 class="service-title">Keramická ochrana</h3>
+            <p class="service-description">Nanesení keramického povlaku na lak, který chrání před vnějšími vlivy a zajišťuje dlouhotrvající lesk.</p>
+            <div class="dropdown-content">
+              <h4>Co je keramická ochrana?</h4>
+              <p>Keramická ochrana je pokročilý povlak, který je aplikován na lak automobilu, aby poskytl trvalou ochranu proti nečistotám, vodě, UV záření, a dokonce i chemikáliím.</p>
+              <p>Tento povlak se skládá z nanočástic, které vytvářejí silnou a odolnou vrstvu na povrchu. Keramický povlak odpuzuje vodu, což znamená, že kapky deště nebudou ulpívat na laku a nečistoty budou mít mnohem menší šanci se usadit.</p>
+              <p>Výhody: 
+                <ul>
+                  <li>Ochrana proti škrábancům a oděrkám.</li>
+                  <li>Snadné čištění, méně času stráveného s mytím vozu.</li>
+                  <li>Vysoce odolný vůči chemikáliím a kyselinám.</li>
+                  <li>Zvýšení lesku a hloubky barvy laku.</li>
+                </ul>
+              </p>
+              <p>Proces aplikace zahrnuje důkladnou přípravu laku, odstranění nečistot a následné nanesení vrstvy keramického povlaku, který se po několika hodinách stane tvrdým a stabilním.</p>
+              <p>Výsledek? Auto s dlouhodobou ochranou, které vypadá stále jako nové.</p>
+            </div>
+          </div>
+
+          <!-- More services can follow the same pattern -->
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Kontaktujte nás pro více informací nebo rezervaci.</p>
+      <a href="#contact" class="cta-button">Rezervujte si termín</a>
+    </footer>
+  </div>
+</body>
+
+</html>
