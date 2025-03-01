@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 Čistě ve stylu – Kontakty</title>
+    <link rel="icon" type="image/x-icon" href="../IMG/Icon - logo.jpg">
+<style>
+             @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, black, #0c0e1c);
+            color: white;
+            text-align: center;
+            max-width: 100%;
+            overflow-x: hidden;
+            min-width: 315px;
+            font-family: "Montserrat", sans-serif;
+
+
+        }
+        .navbar {
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+        .contact-page {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .contact-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .contact-logo img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+        .contact-info p {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .contact-info a:hover {
+            color: red;
+        }
+        .contact-map iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 300px;
+            border: none;
+            margin-top: 20px;
+        }
+        .contact-hours {
+            margin-top: 30px;
+        }
+        .contact-social {
+            margin-top: 20px;
+        }
+        .contact-social a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+        .contact-social img {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s;
+        }
+        .contact-social img:hover {
+            transform: scale(1.1);
+        }
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+/* Header Styles */
+.header {
+    position: relative;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+  }
+  
+  .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-family: "Orbitron", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .highlight {
+    color: red;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: red;
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  .hero-content {
+    z-index: 1;
+  }
+  
+  .hero-title {
+    font-size: 5rem;
+  }
+  
+  .hero-description {
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
+  
+  
+  .scroll-down {
+    position: absolute;
+    bottom: 20px;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Media Query for mobile responsiveness */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      z-index: 90;
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .hamburger.active .bar:nth-child(1) {
+      transform: rotate(45deg) translateY(8px);
+    }
+  
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger.active .bar:nth-child(3) {
+      transform: rotate(-45deg) translateY(-8px);
+    }
+  }
+
+  hr{
+    margin: 3rem;
+  }
+
+  @media (max-width:375px){
+    .logo{
+        font-size: 1.5rem;
+    }
+  }
+  .logo a{
+    text-decoration: none;
+    color: white;
+  }
+  
+
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+           <div class="logo">
+             <a href="../index.html"> CISTE<span class="highlight">VESTYLU</span></a>
+           </div>
+           <div class="nav-links">
+              <a href="#services" class="nav-link">Služby</a>
+              <a href="cenik.html" class="nav-link">Ceník</a>
+              <a href="#testimonials" class="nav-link">Galerie</a>
+              <a href="#contact" class="nav-link" style="color: red; ">Kontakt</a>
+           </div>
+           <div class="hamburger" id="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+           </div>
+        </nav>
+     </header>
+    
+    <section class="contact-page">
+        <div class="contact-container">
+            <div class="contact-logo">
+                <img src="../IMG/Icon - logo.jpg" alt="Logo firmy">
+            </div>
+            <div class="contact-info">
+                <h2>Kontaktujte nás</h2>
+                <p>📍 Adresa: Ulice 123, Město</p>
+                <p>📞 Telefon: <a href="tel:+420123456789">+420 123 456 789</a></p>
+                <p>📧 Email: <a href="mailto:info@firma.cz">info@firma.cz</a></p>
+                <p>📌 IČO: 12345678</p>
+            </div>
+        </div>
+        <div class="contact-map">
+            <h3>Kde nás najdete?</h3>
+            <iframe src="https://www.google.com/maps/embed?..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="contact-hours">
+            <h3>Otevírací doba</h3>
+            <p>Pondělí - Pátek: 9:00 - 17:00</p>
+            <p>Sobota - Neděle: <span style="color: red;">Zavřeno</span></p>
+        </div>
+        <hr>
+        <div class="contact-social">
+            <h3>Sledujte nás</h3>
+            <a href="#"><img src="../IMG/icons8-facebook-circled.svg" alt="Facebook"></a>
+            <a href="#"><img src="../IMG/icons8-instagram.svg" alt="Instagram"></a>
+        </div>
+    </section>
+
+    <script>
+
+document.getElementById('hamburger').addEventListener('click', function() {
+  this.classList.toggle('active');
+  document.querySelector('.nav-links').classList.toggle('open');
+});
+
+    </script>
+
+
+</body>
+</html>
