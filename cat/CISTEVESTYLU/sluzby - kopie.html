@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mytí interiéru</title>
+    <style>
+/* Service Cards */
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 60px;
+}
+
+.service-card {
+  text-align: center;
+  align-items: center;
+  border-radius: 2px;
+  text-align: left;
+  transition: box-shadow 0.3s;
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: red;
+  margin-bottom: 20px;
+}
+
+hr {
+  margin: 0 auto;
+  width: 80%;
+  border: red solid 1px;
+}
+
+.service-photo {
+  margin: 0 auto;
+  align-items: center;
+  width: 100%;
+  height: 30vh;
+  object-fit: cover; /* Zajistí, že obrázek vyplní daný prostor bez deformace */
+  display: block;
+}
+
+.service-padding {
+  padding: 60px 20px;
+}
+
+.know-more {
+  text-align: center;
+  align-items: center;
+  height: 48px;
+  width: 114px;
+  border: solid red 1px;
+  background-color: black;
+  color: white;
+}
+
+.know-more:hover {
+  background-color: red;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.service-button {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.service-title {
+  text-align: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.service-description {
+  text-align: center;
+  align-items: center;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 3rem;
+}
+
+#services {
+  background: linear-gradient(to bottom, black, black, black, #0c0e1c);
+}
+
+    </style>
+</head>
+<body>
+    <section id="services" class="section">
+        <div class="section-content">
+          <h2 class="section-title">Špičková péče o interiér i exteriér vašeho vozu</h2>
+          <div class="service-cards">
+            <div class="service-card">
+              <div class="service-photo-div">
+                <img class="service-photo" src="IMG/interior-cleaning.jpg" alt="Mytí interiéru">
+              </div>
+              <div class="service-padding">
+                <h3 class="service-title">Mytí interiéru</h3>
+                <p class="service-description">Šetrné a detailní čištění interiéru, které vašemu vozu zajistí svěží a čistý vzhled.</p>
+                <hr>
+                <h4>Více informací:</h4>
+                <p class="service-description">
+                  Detailing interiéru auta zahrnuje komplexní čištění a ošetření všech částí vozu. Provádíme důkladné vysávání, čištění čalounění, kožených povrchů a plastů. Postaráme se o odstranění skvrn, zápachů a zvířecích chlupů, a vše zakončíme osvěžením interiéru příjemnou vůní. Váš vůz bude nejen čistý, ale i svěží a pohodlný.
+                </p>
+                <h5>Základní služba:</h5>
+                <ul>
+                  <li>Umytí mezidveřních prostorů a pantů</li>
+                  <li>Vysátí vozu</li>
+                  <li>Vyfoukání spár od prachu a hrubých nečistot</li>
+                  <li>Čištění plastových dílů</li>
+                  <li>Čištění kolejnic sedadel</li>
+                  <li>Tepování koberců</li>
+                  <li>Tepování textilního čalounění</li>
+                  <li>Čištění koženého čalounění</li>
+                  <li>Leštění oken zevnitř i zvenku</li>
+                  <li>Ozonové čištění vnitřní cirkulace</li>
+                  <li>Provonění interiéru</li>
+                  <li>Vysušení interiéru</li>
+                </ul>
+                <h5>Detailní služba:</h5>
+                <ul>
+                  <li>Demontáž sedadel a čištění prostoru pod nimi</li>
+                  <li>Detailní čištění spár a těsnění</li>
+                  <li>Odstranění nálepek a dálničních známek z oken</li>
+                  <li>Impregnace koženého čalounění</li>
+                  <li>Detailní čištění rezervního kola a prostoru</li>
+                </ul>
+                <div class="service-button">
+                  <button class="know-more">Zjistit více</button>
+                </div>
+              </div>
+            </div>            
+            
+            <!-- Add other services here (Expresní služba, Renovace laku, etc.) -->
+      
+          </div>
+        </div>
+      </section>
+      
+</body>
+</html>

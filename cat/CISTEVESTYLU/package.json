@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "react-snap": "^1.23.0"
+  }
+}
+
+"scripts": {
+  "postbuild": "react-snap"
+}

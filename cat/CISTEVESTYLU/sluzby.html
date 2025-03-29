@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🔥 Čistě ve stylu – Perfektní péče o váš vůz! 🚘✨</title>
+  <link rel="icon" type="image/x-icon" href="IMG/Icon - logo.jpg">
+
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+
+}
+  
+#testimonials {
+    position: relative;
+    overflow: hidden;
+    min-height: 60vh;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+  }
+  .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+  }
+  .testimonial-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 5rem;
+  }
+  .testimonial-container {
+    width: 600px;
+    overflow: hidden;
+  }
+  .testimonial-cards {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    
+  }
+  .testimonial-card {
+    min-width: 600px;
+    padding: 30px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-align: center;
+  }
+  .testimonial-card p{
+    margin-bottom: 1rem;
+  }
+  .testimonial-author{
+    font-size: large;
+    font-weight: 600;
+  }
+  .testimonial-stars{
+    height: 18px;
+    width: auto;
+  }
+  .nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+  }
+  .nav-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+  }
+  @media (min-width: 768px) {
+    .nav-buttons {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .nav-btn {
+      position: relative;
+    }
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: black;
+    min-width: 315px;
+}
+
+ /* h1, h2, h3, h4{
+    font-family: "Orbitron", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }*/
+  
+  /* Header Styles */
+  .header {
+    position: relative;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+  }
+  
+  .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-family: "Orbitron", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .highlight {
+    color: red;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: red;
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  .hero-content {
+    z-index: 1;
+  }
+  
+  .hero-title {
+    font-size: 5rem;
+  }
+  
+  .hero-description {
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
+  
+  
+  .scroll-down {
+    position: absolute;
+    bottom: 20px;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Media Query for mobile responsiveness */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      z-index: 90;
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .hamburger.active .bar:nth-child(1) {
+      transform: rotate(45deg) translateY(8px);
+    }
+  
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger.active .bar:nth-child(3) {
+      transform: rotate(-45deg) translateY(-8px);
+    }
+  }
+
+  
+  
+
+.service-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.image img {
+    max-height: 640px;
+    border-radius: 10px;
+}
+
+.text {
+    max-width: 600px;
+    padding-left: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+.why-us {
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+}
+
+.why-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: linear-gradient(to bottom, black, #0c0e1c);
+    border: 1px red solid;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 350px;
+    text-align: center;
+}
+
+.feature img {
+    width: 60px; /* Mírně menší pro lepší responzivitu */
+    height: 60px;
+    background: black;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: -30px; /* Posun dolů bez použití `position` */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feature h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.feature p {
+    font-size: 1rem;
+}
+.feature--div{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.footer-info{
+  margin-bottom: 2rem;
+}
+
+.footer-info p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.footer-info a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-info a:hover {
+  color: red;
+}
+
+.footer-social {
+  margin-top: 20px;
+}
+
+.footer-social a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.footer-social img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s;
+}
+
+.footer-social img:hover {
+  transform: scale(1.1);
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  margin-top: 20px;
+  opacity: 0.7;
+}
+
+.svg-social{
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      text-align: center;
+  }
+}
+
+@media (max-width: 640px){
+  .testimonial-container {
+    width: 300px;
+  }
+
+  .testimonial-card {
+    min-width: 300px;
+  }
+
+}
+
+
+
+
+  @media (max-width: 420px){
+
+    .pricing-card{
+        padding: 2rem;
+    }
+
+
+
+    .hero-title {
+        font-size: 3.5rem;
+      }
+  }
+
+  @media (max-width:375px){
+    .logo{
+        font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .pricing-features li{
+        font-size: 0.9rem;
+    }
+    .pricing-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        text-align: center;
+      }
+  }
+
+/* 🌍 RESPONSIVNÍ DESIGN */
+@media (max-width: 900px) {
+    .service-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image img {
+        max-width: 100%;
+    }
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        max-width: 100%;
+    }
+}
+
+
+    
+</style>
+
+
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+        <nav class="navbar">
+          <div class="logo">
+            CISTE<span class="highlight">VESTYLU</span>
+          </div>
+          <div class="nav-links">
+            <a href="#services" class="nav-link">Služby</a>
+            <a href="SUB/cenik.html" class="nav-link">Ceník</a>
+            <a href="" class="nav-link">Galerie</a>
+            <a href="SUB/kontakty.html" class="nav-link">Kontakt</a>
+          </div>
+          <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </header>
+
+      <section class="why-us">
+        <h2>Proč si vybrat nás?</h2>
+        <div class="features">
+            <div class="feature">
+                <img src="IMG/usp-cena-black.jpg" alt="Dostupná cena">
+                <h3>Dostupná cena</h3>
+                <p>I když vidíte na fotkách nadupané supersporty, tak naše služby jsou cenově dostupné pro každého. Služby začínají už na cenovce 1 490 Kč.</p>
+            </div>
+            <div class="feature">
+                <img src="IMG/usp-cena-black.jpg" alt="O vůz se nemusíte bát">
+                <h3>O vůz se nemusíte bát</h3>
+                <p>Hned po zaparkování napojíme vůz na udržovací nabíječku a po celou dobu naše studio hlídají bezpečnostní kamery. Samozřejmostí je pojištění bezpečnosti a auto vám předáme v ochranné plachtě.</p>
+            </div>
+            <div class="feature">
+                <div class="feature--div">                
+                    <h3>Moderní zázemí</h3>
+                    <img src="IMG/usp-cena-black.jpg" alt="Moderní zázemí">
+                </div>
+                <p>Moderní garáž industriálního stylu přímo v prostoru našeho detailingového studia. V čase kdy se postaráme o ruční mytí vašeho vozu si můžete dopřát kvalitní kávu a zpříjemnit chvilku čekání.</p>
+            </div>
+        </div>
+    </section>
+
+      <section class="service-container">
+        <div class="image">
+            <img src="IMG/73234e79-ea5a-4c84-be64-e5f4abf03378.jpg" alt="Renovace laku">
+        </div>
+        <div class="text">
+            <h2>Renovace laku</h2>
+            <p>Součástí našeho detailingového studia je vlastní mycí box, který je vybaven zvedacím zařízením i pro účely detailního mytí podvozku...</p>
+            <p>Dbáme na správné postupy, používáme kvalitní autokosmetiku a příslušenství.</p>
+            <p>Renovací laku jsme schopni docílit odstranění vad:</p>
+            <ul>
+                <li>vybledlý nebo suchý lak</li>
+                <li>defekty laku vzniklé poškrábáním</li>
+                <li>následky kartáčových myček</li>
+                <li>skvrny tvrdé vody</li>
+                <li>Umytí mezidveřních prostorů a pantů</li>
+                <li>Vysátí vozu</li>
+                <li>Vyfoukání spár od prachu a hrubých nečistot</li>
+                <li>Čištění plastových dílů</li>
+                <li>Čištění kolejnic sedadel</li>
+                <li>Tepování koberců</li>
+                <li>Tepování textilního čalounění</li>
+                <li>Čištění koženého čalounění</li>
+                <li>Leštění oken zevnitř i zvenku</li>
+                <li>Ozonové čištění vnitřní cirkulace</li>
+                <li>Provonění interiéru</li>
+                <li>Vysušení interiéru</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="testimonials" class="section">
+      <div class="background-overlay"></div>
+      <div class="section-content">
+
+        <div class="testimonial-wrapper">
+          <div class="testimonial-container">
+            <div class="testimonial-cards">
+              <div class="testimonial-card" data-bg="IMG/ef781a8b-6eff-414d-84aa-fa95add7d095.jpg">
+                <p class="testimonial-author">Michael R.</p>
+                <p><img class="testimonial-stars" src="IMG/icons8-star-50.png"><img class="testimonial-stars" src="IMG/icons8-star-50.png"><img class="testimonial-stars" src="IMG/icons8-star-50.png"><img class="testimonial-stars" src="IMG/icons8-star-50.png"><img class="testimonial-stars" src="IMG/icons8-star-50.png"></p>
+                <p class="testimonial-text">"The attention to detail and quality of service exceeded my expectations. My car looks better than when it was new."</p>
+              </div>
+              <div class="testimonial-card" data-bg="IMG/ef781a8b-6eff-414d-84aa-fa95add7d095.jpg">
+                <p class="testimonial-author">Sarah T.</p>
+                <p><img class="testimonial-stars" src="IMG/icons8-star-50.png"><img class="testimonial-stars" src="IMG/icons8-star-50.png"><img class="testimonial-stars" src="IMG/icons8-star-50.png"><img class="testimonial-stars" src="IMG/icons8-star-50.png"><img class="testimonial-stars" src="IMG/icons8-star-50.png"></p>
+                <p class="testimonial-text">"Fantastic experience! The team was professional and thorough. Highly recommended."</p>
+              </div>
+              <div class="testimonial-card" data-bg="IMG/5825739.jpg">
+                <p class="testimonial-author">David L.</p>
+                <p><img class="testimonial-stars" src="IMG/icons8-star-50.png"><img class="testimonial-stars" src="IMG/icons8-star-50.png"><img class="testimonial-stars" src="IMG/icons8-star-50.png"><img class="testimonial-stars" src="IMG/icons8-star-50.png"><img class="testimonial-stars" src="IMG/icons8-star-50.png"></p>
+                <p class="testimonial-text">"Excellent customer service and amazing results. My car has never looked better!"</p>
+              </div>
+            </div>
+          </div>
+          <div class="nav-buttons">
+            <button class="nav-btn left" onclick="prevSlide()"><span style="color: white;">&#10094;</span></button>
+            <button class="nav-btn right" onclick="nextSlide()"><span style="color: white;">&#10095;</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+          <div class="footer-logo">
+              <img src="IMG/Icon - logo.jpg" alt="Logo firmy">
+          </div>
+          <div class="footer-info">
+              <p>📍 Adresa: Ulice 123, Město</p>
+              <p>📞 Telefon: <a href="tel:+420123456789">+420 123 456 789</a></p>
+              <p>📧 Email: <a href="mailto:info@firma.cz">info@firma.cz</a></p>
+              <p>📌 IČO: 12345678</p>
+          </div>
+      </div>
+      <hr>
+      <div class="footer-social">
+          <a href="#"><img class="svg-social" src="IMG/icons8-facebook-circled.svg" alt="Facebook"></a>
+          <a href="#"><img src="IMG/icons8-instagram.svg" alt="Instagram"></a>
+      </div>
+      <p class="footer-copy">© 2024 FIRMA S.R.O. All rights reserved.</p>
+  </footer>
+  
+  
+  </div>
+
+
+<script>
+
+document.getElementById('hamburger').addEventListener('click', function() {
+  this.classList.toggle('active');
+  document.querySelector('.nav-links').classList.toggle('open');
+});
+
+let index = 0;
+  const cards = document.querySelectorAll(".testimonial-card");
+  const totalCards = cards.length;
+  const container = document.querySelector(".testimonial-cards");
+  const bgOverlay = document.querySelector(".background-overlay");
+
+  function updateBackground() {
+    bgOverlay.style.backgroundImage = `url(${cards[index].getAttribute("data-bg")})`;
+  }
+  function showSlide() {
+    let slideWidth = window.innerWidth <= 640 ? 300 : 600;
+    container.style.transform = `translateX(-${index * slideWidth}px)`;
+    updateBackground();
+}
+
+window.addEventListener('resize', showSlide);
+
+  function prevSlide() {
+    index = (index > 0) ? index - 1 : totalCards - 1;
+    showSlide();
+  }
+  function nextSlide() {
+    index = (index < totalCards - 1) ? index + 1 : 0;
+    showSlide();
+  }
+  document.addEventListener("DOMContentLoaded", updateBackground);
+
+
+  function getStarIcons(count) {
+    let icons = '';
+    for (let i = 0; i < count; i++) {
+        icons += `
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-red-600 fill-current">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+        `;
+    }
+    return icons;
+}
+
+document.getElementById("stars").innerHTML = getStarIcons(5)
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+
+</html>

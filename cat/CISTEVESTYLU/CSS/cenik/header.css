@@ -1,0 +1,162 @@
+/* Header Styles */
+.header {
+	position: relative;
+	height: 20vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.4);
+}
+
+.background-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.5;
+}
+
+.navbar {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 10;
+}
+
+.logo {
+	font-size: 2rem;
+	font-family: "Orbitron", serif;
+	font-weight: 900;
+	font-style: normal;
+}
+
+.highlight {
+	color: red;
+	font-family: "Orbitron", serif;
+	font-weight: 900;
+	font-style: normal;
+}
+
+li {
+	font-family: "Montserrat", sans-serif;
+}
+
+.nav-links {
+	display: flex;
+	gap: 30px;
+}
+
+.nav-link {
+	text-decoration: none;
+	color: white;
+	transition: color 0.3s;
+	text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover {
+	color: red;
+}
+
+.hamburger {
+	display: none;
+	flex-direction: column;
+	gap: 5px;
+	cursor: pointer;
+}
+
+.bar {
+	width: 25px;
+	height: 3px;
+	background-color: white;
+	border-radius: 5px;
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+.hero-content {
+	z-index: 1;
+}
+
+ul {
+	font-family: "Montserrat", sans-serif;
+
+}
+
+.hero-description {
+	font-size: 1.5rem;
+	margin: 20px 0;
+}
+
+.scroll-down {
+	position: absolute;
+	bottom: 20px;
+	animation: bounce 2s infinite;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes bounce {
+
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+/* Media Query for mobile responsiveness */
+@media (max-width: 768px) {
+	.nav-links {
+		display: none;
+		flex-direction: column;
+		gap: 20px;
+		position: absolute;
+		top: 60px;
+		right: 20px;
+		background-color: rgba(0, 0, 0, 0.8);
+		padding: 20px;
+		border-radius: 10px;
+		z-index: 90;
+	}
+
+	.nav-links.open {
+		display: flex;
+	}
+
+	.hamburger {
+		display: flex;
+	}
+
+	.hamburger.active .bar:nth-child(1) {
+		transform: rotate(45deg) translateY(8px);
+	}
+
+	.hamburger.active .bar:nth-child(2) {
+		opacity: 0;
+	}
+
+	.hamburger.active .bar:nth-child(3) {
+		transform: rotate(-45deg) translateY(-8px);
+	}
+}
